@@ -253,6 +253,21 @@
       activateContactTab(link.getAttribute('data-contact-tab-target'));
     });
   });
+  
+  const heroSlides = document.querySelectorAll('.hero-bg-slide');
+  
+  if (heroSlides.length > 1) {
+    let currentHeroSlide = 0;
+  
+    setInterval(() => {
+      heroSlides[currentHeroSlide].classList.remove('active');
+  
+      currentHeroSlide =
+        (currentHeroSlide + 1) % heroSlides.length;
+  
+      heroSlides[currentHeroSlide].classList.add('active');
+    }, 7000);
+  }
 
   /* ---------- Routed contact forms (client-side only, no backend) ---------- */
   document.querySelectorAll('.contact-panel[data-route-email]').forEach(function (form) {
