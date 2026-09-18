@@ -833,8 +833,8 @@ h4 {
 
 .paths-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-6);
+  grid-template-columns: .75fr repeat(3, 1fr);
+  gap: var(--space-4);
 }
 .path-card {
   border-radius: var(--radius-lg);
@@ -846,6 +846,39 @@ h4 {
   gap: var(--space-4);
   transition: box-shadow var(--transition-interactive), transform var(--transition-interactive), border-color var(--transition-interactive);
 }
+.path-card.card-filled {
+  padding: 0;
+  overflow: hidden;
+  align-self: start;
+  height: 50%;
+}
+.path-card.card-filled img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center bottom;
+}
+.path-card.card-filled img.focus-top {
+  object-position: center top;
+}
+
+.path-card.card-filled img.focus-center {
+  object-position: center center;
+}
+
+.path-card.card-filled img.focus-bottom {
+  object-position: center bottom;
+}
+
+.path-card.card-filled img.focus-left {
+  object-position: left center;
+}
+
+.path-card.card-filled img.focus-right {
+  object-position: right center;
+}
+
 .path-card:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-4px);
@@ -1063,7 +1096,16 @@ h4 {
 .review-card.is-large {
   grid-column: span 2;
   grid-row: span 2;
-  background: var(--color-ink);
+  /* background: var(--color-ink); */
+  background:   linear-gradient(
+    135deg,
+    rgba(8, 12, 10, 0.92),
+    rgba(8, 12, 10, 0.76)
+  ),
+  url("./assets/attendee_gallery/aiicon-attendees7.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--color-ink-text);
   padding: var(--space-8);
   justify-content: space-between;
