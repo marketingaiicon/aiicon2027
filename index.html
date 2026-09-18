@@ -609,7 +609,7 @@
     </div>
 
     <div class="contact-panels">
-      <form class="contact-panel is-active reveal" id="contact-panel-attendee" role="tabpanel" data-contact-panel="attendee" data-route-email="marketing@aiicon.org">
+      <form class="contact-panel is-active reveal" name="marketing-inquiry" data-netlify="true" id="contact-panel-attendee" role="tabpanel" data-contact-panel="attendee" data-route-email="marketing@aiicon.org">
         <p class="contact-panel-note">Questions about registration, tickets, or the event itself. Routed to <strong>marketing@aiicon.org</strong>.</p>
         <label class="sr-only" for="attendeeName">Name</label>
         <input class="footer-input" type="text" id="attendeeName" name="name" placeholder="Your name" required />
@@ -620,7 +620,7 @@
         <button type="submit" class="btn btn-primary" style="width:100%;">Send to Attendee Team</button>
       </form>
 
-      <form class="contact-panel reveal" id="contact-panel-exhibitor" role="tabpanel" data-contact-panel="exhibitor" data-route-email="exhibitors@aiicon.org" hidden>
+      <!-- <form class="contact-panel reveal" id="contact-panel-exhibitor" role="tabpanel" data-contact-panel="exhibitor" data-route-email="exhibitors@aiicon.org" hidden>
         <p class="contact-panel-note">Interested in exhibiting at AIICON 2027? Routed to <strong>exhibitors@aiicon.org</strong>.</p>
         <label class="sr-only" for="exhibitorName">Name</label>
         <input class="footer-input" type="text" id="exhibitorName" name="name" placeholder="Your name" required />
@@ -631,9 +631,9 @@
         <label class="sr-only" for="exhibitorMsg">Message</label>
         <textarea class="footer-input" id="exhibitorMsg" name="message" rows="3" placeholder="Tell us about your product or service" required></textarea>
         <button type="submit" class="btn btn-primary" style="width:100%;">Send to Exhibitor Team</button>
-      </form>
+      </form> -->
 
-      <form class="contact-panel reveal" id="contact-panel-sponsor" role="tabpanel" data-contact-panel="sponsor" data-route-email="partnership@aiicon.org" hidden>
+      <form class="contact-panel reveal" name="partnership-inquiry" data-netlify="true" id="contact-panel-sponsor" role="tabpanel" data-contact-panel="sponsor" data-route-email="partnership@aiicon.org" hidden netlify>
         <p class="contact-panel-note">Interested in sponsoring AIICON 2027? Routed to <strong>partnership@aiicon.org</strong>.</p>
         <label class="sr-only" for="sponsorName">Name</label>
         <input class="footer-input" type="text" id="sponsorName" name="name" placeholder="Your name" required />
@@ -646,7 +646,7 @@
         <button type="submit" class="btn btn-primary" style="width:100%;">Send to Sponsorship Team</button>
       </form>
 
-      <form class="contact-panel reveal" id="contact-panel-trainer" role="tabpanel" data-contact-panel="trainer" data-route-email="trainers@aiicon.org" hidden>
+      <form class="contact-panel reveal" name="trainer-inquiry" data-netlify="true" id="contact-panel-trainer" role="tabpanel" data-contact-panel="trainer" data-route-email="trainers@aiicon.org" hidden netlify>
         <p class="contact-panel-note">Want to lead a workshop, panel, or masterclass? Routed to <strong>trainers@aiicon.org</strong>.</p>
         <label class="sr-only" for="trainerName">Name</label>
         <input class="footer-input" type="text" id="trainerName" name="name" placeholder="Your name" required />
