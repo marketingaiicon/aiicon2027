@@ -215,7 +215,7 @@ h4 {
 .btn-outline {
   background: transparent;
   color: var(--color-text);
-  border-color: var(--color-border);
+  border-color: var(--color-primary);
 }
 .btn-outline:hover {
   border-color: var(--color-text);
