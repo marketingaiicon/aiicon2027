@@ -269,7 +269,7 @@
     }, 7000);
   }
 
-  document.querySelectorAll('.contact-panel[data-netlify="true"]').forEach(function (form) {
+  document.querySelectorAll('.contact-panel').forEach(function (form) {
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
   
