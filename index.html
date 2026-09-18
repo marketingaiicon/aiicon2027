@@ -609,9 +609,20 @@
     </div>
 
     <div class="contact-panels">
-      <form class="contact-panel is-active reveal" name="marketing-inquiry" data-netlify="true" id="contact-panel-attendee" role="tabpanel" data-contact-panel="attendee" data-route-email="marketing@aiicon.org">
+      <form class="contact-panel is-active reveal" name="marketing-inquiry" data-netlify="true" id="contact-panel-attendee" role="tabpanel" data-contact-panel="attendee" method="POST" netlify-honeypot="bot-field" action="/thank-you/">
+        <input type="hidden" name="form-name" value="marketing-inquiry">
+        
+        <p hidden>
+          <label>
+            Don’t fill this out:
+            <input name="bot-field">
+          </label>
+        </p>
+        
         <p class="contact-panel-note">Questions about registration, tickets, or the event itself.</p>
         <!-- Routed to <strong>marketing@aiicon.org</strong>. -->
+        
+        
         <label class="sr-only" for="attendeeName">Name</label>
         <input class="footer-input" type="text" id="attendeeName" name="name" placeholder="Your name" required />
         <label class="sr-only" for="attendeeEmail">Email address</label>
@@ -634,7 +645,16 @@
         <button type="submit" class="btn btn-primary" style="width:100%;">Send to Exhibitor Team</button>
       </form> -->
 
-      <form class="contact-panel reveal" name="partnership-inquiry" data-netlify="true" id="contact-panel-sponsor" role="tabpanel" data-contact-panel="sponsor" data-route-email="partnership@aiicon.org" hidden netlify>
+      <form class="contact-panel reveal" name="partnership-inquiry" data-netlify="true" id="contact-panel-sponsor" role="tabpanel" data-contact-panel="sponsor" hidden method="POST" netlify-honeypot="bot-field" action="/thank-you/">
+        <input type="hidden" name="form-name" value="partnership-inquiry">
+        
+        <p hidden>
+          <label>
+            Don’t fill this out:
+            <input name="bot-field">
+          </label>
+        </p>
+        
         <p class="contact-panel-note">Interested in sponsoring AIICON 2027?</p>
         <!-- Routed to <strong>partnership@aiicon.org</strong>. -->
         <label class="sr-only" for="sponsorName">Name</label>
@@ -648,7 +668,17 @@
         <button type="submit" class="btn btn-primary" style="width:100%;">Send to Sponsorship Team</button>
       </form>
 
-      <form class="contact-panel reveal" name="trainer-inquiry" data-netlify="true" id="contact-panel-trainer" role="tabpanel" data-contact-panel="trainer" data-route-email="trainers@aiicon.org" hidden netlify>
+      <form class="contact-panel reveal" name="trainer-inquiry" data-netlify="true" id="contact-panel-trainer" role="tabpanel" data-contact-panel="trainer" hidden method="POST" netlify-honeypot="bot-field" action="/thank-you/">
+        
+        <input type="hidden" name="form-name" value="trainer-inquiry">
+        
+        <p hidden>
+          <label>
+            Don’t fill this out:
+            <input name="bot-field">
+          </label>
+        </p>
+        
         <p class="contact-panel-note">Want to lead a workshop, panel, or masterclass?</p>
         <!-- Routed to <strong>trainers@aiicon.org</strong>. -->
         <label class="sr-only" for="trainerName">Name</label>

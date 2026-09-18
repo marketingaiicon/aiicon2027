@@ -269,27 +269,43 @@
     }, 7000);
   }
 
-  /* ---------- Routed contact forms (client-side only, no backend) ---------- */
-  document.querySelectorAll('.contact-panel[data-route-email]').forEach(function (form) {
-    form.addEventListener('submit', function (e) {
+  document.querySelectorAll('.contact-panel[data-netlify="true"]').forEach(function (form) {
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
-      var btn = form.querySelector('button[type="submit"]');
-      var original = btn.textContent;
-      var routeEmail = form.getAttribute('data-route-email');
-      var data = new FormData(form);
-      var name = data.get('name') || '';
-      var message = data.get('message') || '';
-      var subject = encodeURIComponent('AIICON 2027 inquiry from ' + name);
-      var body = encodeURIComponent(message + '\n\nFrom: ' + name + ' (' + (data.get('email') || '') + ')');
-      window.location.href = 'mailto:' + routeEmail + '?subject=' + subject + '&body=' + body;
-
-      btn.textContent = 'Opening Email ✓';
+  
+      const btn = form.querySelector('button[type="submit"]');
+      const original = btn.textContent;
+      const data = new FormData(form);
+  
+      btn.textContent = 'Sending Email ...';
       btn.disabled = true;
-      setTimeout(function () {
-        btn.textContent = original;
-        btn.disabled = false;
+  
+      try {
+        const response = await fetch('/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          },
+          body: new URLSearchParams(data).toString()
+        });
+  
+        if (!response.ok) {
+          throw new Error('Form submission failed');
+        }
+  
+        btn.textContent = 'Message Sent ✓';
         form.reset();
-      }, 2600);
+  
+        setTimeout(function () {
+          btn.textContent = original;
+          btn.disabled = false;
+        }, 3000);
+  
+      } catch (error) {
+        btn.textContent = 'Please try again';
+        btn.disabled = false;
+        console.error(error);
+      }
     });
   });
 })();
