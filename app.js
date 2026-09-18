@@ -277,7 +277,7 @@
       const original = btn.textContent;
       const data = new FormData(form);
   
-      btn.textContent = 'Sending Email ...';
+      btn.textContent = 'Sending...';
       btn.disabled = true;
   
       try {
@@ -302,9 +302,9 @@
         }, 3000);
   
       } catch (error) {
-        btn.textContent = 'Please try again';
-        btn.disabled = false;
         console.error(error);
+        btn.textContent = 'Try Again';
+        btn.disabled = false;
       }
     });
   });
