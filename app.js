@@ -308,4 +308,45 @@
       }
     });
   });
+  
+  const backToTop = document.querySelector('.back-to-top');
+  const footer = document.querySelector('footer');
+  
+  function updateBackToTop() {
+    // Show after 300px
+    backToTop.classList.toggle(
+      'is-visible',
+      window.scrollY >= 300
+    );
+  
+    // Default distance from bottom
+    const baseOffset = 24;
+  
+    if (footer) {
+      const footerTop = footer.getBoundingClientRect().top;
+      const viewportHeight = window.innerHeight;
+  
+      // How far the footer has entered the viewport
+      const footerOverlap = Math.max(0, viewportHeight - footerTop);
+  
+      backToTop.style.bottom =
+        `${baseOffset + footerOverlap}px`;
+    }
+  }
+  
+  window.addEventListener('scroll', updateBackToTop, {
+    passive: true
+  });
+  
+  window.addEventListener('resize', updateBackToTop);
+  
+  updateBackToTop();
+  
+  backToTop.addEventListener('click', function () {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  
 })();
