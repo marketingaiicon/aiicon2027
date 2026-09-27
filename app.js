@@ -349,4 +349,201 @@
     });
   });
   
+  /* ========================================
+     LAST EDITION MOSAIC SLIDER
+  ======================================== */
+  
+  const mosaicSlider = document.querySelector('[data-mosaic-slider]');
+  
+  if (mosaicSlider) {
+  
+    const mosaic = mosaicSlider.querySelector('.last-edition-mosaic');
+    const panels = Array.from(
+      mosaicSlider.querySelectorAll('[data-mosaic-panel]')
+    );
+  
+    const currentDisplay =
+      mosaicSlider.querySelector('[data-mosaic-current]');
+  
+    const totalDisplay =
+      mosaicSlider.querySelector('[data-mosaic-total]');
+  
+    const prevButton =
+      mosaicSlider.querySelector('[data-mosaic-prev]');
+  
+    const nextButton =
+      mosaicSlider.querySelector('[data-mosaic-next]');
+  
+  
+    /* ----- IMAGE POOL ----- */
+    /* Add images here */
+  
+    const images = [
+      {
+        src: './assets/attendee_gallery/optimized/aiicon-attendees8.webp',
+        alt: 'AIICON attendees participating in the conference',
+        focus: 'focus-center'
+      },
+      {
+        src: './assets/attendee_gallery/optimized/aiicon-team1.webp',
+        alt: 'AIICON speaker presenting to attendees',
+        focus: 'focus-top'
+      },
+      {
+        src: './assets/attendee_gallery/optimized/aiicon-speaker4.webp',
+        alt: 'AIICON conference session',
+        focus: 'focus-center'
+      },
+  
+      {
+        src: './assets/attendee_gallery/optimized/aiicon-attendees2.webp',
+        alt: 'AIICON attendees participating in the conference',
+        focus: 'focus-center'
+      },
+      {
+        src: './assets/attendee_gallery/optimized/aiicon-speaker2.webp',
+        alt: 'AIICON speaker presenting to attendees',
+        focus: 'focus-top'
+      },
+      {
+        src: './assets/attendee_gallery/optimized/aiicon-speaker5.webp',
+        alt: 'AIICON conference session',
+        focus: 'focus-center'
+      },
+      {
+        src: './assets/attendee_gallery/optimized/aiicon-attendees5.webp',
+        alt: 'AIICON attendees participating in the conference',
+        focus: 'focus-center'
+      },
+      {
+        src: './assets/attendee_gallery/optimized/aiicon-speaker4.webp',
+        alt: 'AIICON speaker presenting to attendees',
+        focus: 'focus-center'
+      },
+      {
+        src: './assets/attendee_gallery/optimized/aiicon-attendees6.webp',
+        alt: 'AIICON conference session',
+        focus: 'focus-center'
+      },
+      {
+        src: './assets/attendee_gallery/optimized/aiicon-attendees4.webp',
+        alt: 'AIICON attendees participating in the conference',
+        focus: 'focus-center'
+      },
+      {
+        src: './assets/attendee_gallery/optimized/aiicon-speaker3.webp',
+        alt: 'AIICON speaker presenting to attendees',
+        focus: 'focus-center'
+      },
+      {
+        src: './assets/attendee_gallery/optimized/aiicon-speaker1.webp',
+        alt: 'AIICON conference session',
+        focus: 'focus-center'
+      },
+  
+    ];
+  
+  
+    let imageIndex = 3;
+    let panelIndex = 0;
+    let changeCount = 0;
+    let autoplay;
+  
+  
+    totalDisplay.textContent =
+      String(images.length).padStart(2, '0');
+  
+  
+    function changePanel(direction = 1) {
+  
+      const panel = panels[panelIndex];
+      const img = panel.querySelector('img');
+  
+      panel.classList.add('is-changing');
+  
+      setTimeout(function () {
+  
+        imageIndex =
+          (imageIndex + direction + images.length) % images.length;
+  
+        const nextImage = images[imageIndex];
+  
+        img.src = nextImage.src;
+        img.alt = nextImage.alt;
+  
+        img.className = nextImage.focus || 'focus-center';
+  
+        requestAnimationFrame(function () {
+          panel.classList.remove('is-changing');
+        });
+  
+      }, 350);
+  
+  
+      panelIndex =
+        (panelIndex + 1) % panels.length;
+  
+      changeCount++;
+  
+  
+      /* Flip desktop composition every 3 changes */
+  
+      if (changeCount % 3 === 0) {
+        mosaic.classList.toggle('is-right');
+      }
+  
+  
+      currentDisplay.textContent =
+        String(imageIndex + 1).padStart(2, '0');
+    }
+  
+  
+    function startAutoplay() {
+      stopAutoplay();
+  
+      autoplay = setInterval(function () {
+        changePanel(1);
+      }, 4500);
+    }
+  
+  
+    function stopAutoplay() {
+      if (autoplay) {
+        clearInterval(autoplay);
+      }
+    }
+  
+  
+    nextButton.addEventListener('click', function () {
+      changePanel(1);
+      startAutoplay();
+    });
+  
+  
+    prevButton.addEventListener('click', function () {
+      changePanel(-1);
+      startAutoplay();
+    });
+  
+  
+    /* Pause while user is interacting */
+  
+    mosaicSlider.addEventListener('mouseenter', stopAutoplay);
+    mosaicSlider.addEventListener('mouseleave', startAutoplay);
+  
+    mosaicSlider.addEventListener('focusin', stopAutoplay);
+    mosaicSlider.addEventListener('focusout', startAutoplay);
+  
+  
+    /* Respect reduced-motion preference */
+  
+    const reducedMotion =
+      window.matchMedia('(prefers-reduced-motion: reduce)');
+  
+    if (!reducedMotion.matches) {
+      startAutoplay();
+    }
+  
+  }
+  
 })();
