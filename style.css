@@ -845,6 +845,114 @@ h4 {
 }
 
 /* ==========================================================================
+   Registration tiers
+   ========================================================================== */
+
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  align-items: stretch;
+}
+.tier-card {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  position: relative;
+}
+.tier-card.is-popular {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-lg);
+  transform: scale(1.02);
+  z-index: 1;
+}
+.tier-popular-badge {
+  position: absolute;
+  top: -14px;
+  left: var(--space-8);
+  background: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-full);
+}
+.tier-limited-badge {
+  position: absolute;
+  top: -14px;
+  left: var(--space-8);
+  background: var(--color-ink);
+  color: var(--color-ink-text);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-full);
+}
+.tier-name {
+  font-size: var(--text-lg);
+  font-weight: 800;
+}
+.tier-price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+.tier-price .amount {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+}
+.tier-price .amount.strike-amt {
+  color: color-mix(in oklab, #000000 46%, transparent);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  margin-bottom: -10px;
+  text-decoration: line-through;
+}
+[data-theme="dark"] .tier-price .amount.strike-amt {
+  color: color-mix(in oklab, #FFFFFF 46%, transparent);
+}
+.tier-price .period {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+.tier-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+.tier-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex-grow: 1;
+}
+.tier-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+}
+.tier-features svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ==========================================================================
    Learning paths
    ========================================================================== */
 
@@ -1194,112 +1302,55 @@ h4 {
 }
 
 /* ==========================================================================
-   Registration tiers
-   ========================================================================== */
-
-.tiers-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-5);
-  align-items: stretch;
-}
-.tier-card {
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--color-border);
-  background: var(--color-surface);
-  padding: var(--space-8);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
-  position: relative;
-}
-.tier-card.is-popular {
-  border-color: var(--color-primary);
-  box-shadow: var(--shadow-lg);
-  transform: scale(1.02);
-  z-index: 1;
-}
-.tier-popular-badge {
-  position: absolute;
-  top: -14px;
-  left: var(--space-8);
-  background: var(--color-primary);
-  color: #fff;
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: var(--text-xs);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: var(--space-1) var(--space-4);
-  border-radius: var(--radius-full);
-}
-.tier-limited-badge {
-  position: absolute;
-  top: -14px;
-  left: var(--space-8);
-  background: var(--color-ink);
-  color: var(--color-ink-text);
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: var(--text-xs);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: var(--space-1) var(--space-4);
-  border-radius: var(--radius-full);
-}
-.tier-name {
-  font-size: var(--text-lg);
-  font-weight: 800;
-}
-.tier-price {
-  display: flex;
-  align-items: baseline;
-  gap: var(--space-2);
-}
-.tier-price .amount {
-  font-family: var(--font-display);
-  font-size: var(--text-2xl);
-  font-weight: 800;
-}
-.tier-price .amount.strike-amt {
-  color: color-mix(in oklab, #000000 46%, transparent);
-  font-family: var(--font-display);
-  font-size: var(--text-xl);
-  font-weight: 800;
-  margin-bottom: -10px;
-  text-decoration: line-through;
-}
-[data-theme="dark"] .tier-price .amount.strike-amt {
-  color: color-mix(in oklab, #FFFFFF 46%, transparent);
-}
-.tier-price .period {
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
-}
-.tier-desc {
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
-}
-.tier-features {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  flex-grow: 1;
-}
-.tier-features li {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-2);
-  font-size: var(--text-sm);
-  color: var(--color-text);
-}
-.tier-features svg {
-  width: 18px;
-  height: 18px;
-  color: var(--color-primary);
-  flex-shrink: 0;
-  margin-top: 2px;
-}
+ Partner logos
+ ========================================================================== */
+ #partner_logos {
+   padding-block: var(--space-12);
+   background-color: #FBFBFB;
+   border-top: 1px solid var(--color-border);
+ }
+ 
+ .partners-grid {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+   align-items: center;
+   gap: clamp(var(--space-8), 6vw, var(--space-16));
+ 
+   max-width: 900px;
+   margin-inline: auto;
+ }
+ 
+ .partner-logo {
+   display: grid;
+   place-items: center;
+   min-height: 100px;
+ }
+ 
+ /* .partner-logo:nth-child(2) img {
+   max-height: 58px;
+ } */
+ 
+ .partner-logo img {
+   display: block;
+   width: auto;
+   height: auto;
+   max-width: 100%;
+   max-height: 72px;
+   object-fit: contain;
+ }
+ 
+ @media (max-width: 600px) {
+   .partners-grid {
+     grid-template-columns: 1fr;
+     gap: var(--space-8);
+   }
+ 
+   .partner-logo {
+     margin: 0 auto;
+     max-width: 60%;
+     min-height: 72px;
+   }
+ }
 
 /* ==========================================================================
    CTA banner

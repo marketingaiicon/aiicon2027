@@ -27,7 +27,7 @@
   - *Note: Visibly display the original rate with a strikethrough next to the active price. (Check doc spec if GA active tier math matches `$499 $249`).*
 - [x] done: 10. Add a skill assessment (Beginner, Intermediate, Advanced) and integrate Google Analytics and FB pixel for ad retargeting.
   - *Note: Integrate Google Analytics (GA4) and Facebook (Meta) Pixel specifically for assessment completion tracking.*
-- [ ] todo: 11. In the "Reach the Right Team" section, set all fields as required, add a CAPTCHA, and add a "Partner" button that routes to partnership@aiicon.org.
+- [x] done: 11. In the "Reach the Right Team" section, set all fields as required, add a CAPTCHA, and add a "Partner" button that routes to partnership@aiicon.org.
   - *Note: Use Google reCAPTCHA v3 or Cloudflare Turnstile. Configure the button link as `mailto:partnership@aiicon.org`.*
 
 ## 🌐 Phase 4: Navigation, Social, Footer & Accessibility QA
