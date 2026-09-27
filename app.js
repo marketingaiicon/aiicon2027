@@ -387,7 +387,7 @@
       {
         src: './assets/attendee_gallery/optimized/aiicon-team1.webp',
         alt: 'AIICON speaker presenting to attendees',
-        focus: 'focus-top'
+        focus: 'focus-left'
       },
       {
         src: './assets/attendee_gallery/optimized/aiicon-speaker4.webp',
@@ -404,6 +404,11 @@
         src: './assets/attendee_gallery/optimized/aiicon-speaker2.webp',
         alt: 'AIICON speaker presenting to attendees',
         focus: 'focus-top'
+      },
+      {
+        src: './assets/attendee_gallery/optimized/aiicon-attendees-overwatch.webp',
+        alt: 'AIICON conference session',
+        focus: 'focus-center'
       },
       {
         src: './assets/attendee_gallery/optimized/aiicon-speaker5.webp',

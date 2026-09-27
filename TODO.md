@@ -16,14 +16,14 @@
 ## 🛠️ Phase 2: Content Modules, Media & Grid Alignment
 - [x] done: 5. In the "AI Look Bank" section, change "LOOKS" so it is no longer capitalized.
   - *Note: Update heading and body copy formatting cleanly to sentence/title case ("AI Look Bank" or "Look").*
-- [ ] todo: 6. Convert the three static images into a carousel and allow for additional images.
+- [x] done: 6. Convert the three static images into a carousel and allow for additional images.
   - *Note: Ensure it is touch-friendly with left/right navigation arrows, dot indicators, and modular code/CMS compatibility.*
 - [x] done: 9. In the START/APPLY/BUILD section, have two pictures to align with the three boxes, and fix the line alignment on the BUILD box to match START and APPLY.
   - *Note: Correct the structural box line alignment and vertical top/bottom baseline padding on the BUILD card.*
 
 ## 💳 Phase 3: Pricing, Lead Generation & Conversion Features
 - [x] done: 7. Under "Pick Your Access Level", remove the text: "Higher tiers add Day One access and one-on-one implemetnation time."
-- [ ] todo: 8. Update pricing display: strike out \$399 for General Admission, \$699 for ICON Tier, and \$999 for Premier ICON Tier.
+- [x] done: 8. Update pricing display: strike out \$399 for General Admission, \$699 for ICON Tier, and \$999 for Premier ICON Tier.
   - *Note: Visibly display the original rate with a strikethrough next to the active price. (Check doc spec if GA active tier math matches `$499 $249`).*
 - [x] done: 10. Add a skill assessment (Beginner, Intermediate, Advanced) and integrate Google Analytics and FB pixel for ad retargeting.
   - *Note: Integrate Google Analytics (GA4) and Facebook (Meta) Pixel specifically for assessment completion tracking.*
