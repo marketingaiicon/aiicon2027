@@ -41,5 +41,5 @@
   - *Note: Set floating button to trigger past 300px. Use smooth scroll behavior (`window.scrollTo({ top: 0, behavior: 'smooth' })`).*
 - [x] done: 16. Review the site in dark/night view after these changes to ensure visibility.
   - *Note: Ensure the text contrast against the white hero transition meets WCAG AA standards. Audit borders on floating elements.*
-- [ ] todo: 17. Add a scrolling logo bar right above the footer using the assets in the "logo" folder on the Marketing drive.
+- [x] done: 17. Add a scrolling logo bar right above the footer using the assets in the "logo" folder on the Marketing drive.
   - *Note: Configure an infinite horizontal scrolling marquee animation. Verify NavyFed is omitted from the file list.*
