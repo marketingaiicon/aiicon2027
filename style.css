@@ -36,6 +36,7 @@
   --color-bg: #ffffff;
   --color-surface: #fbfbfb;
   --color-surface-2: #f5f6f5;
+  --color-surface-contrast: #f5f6f5;
   --color-surface-offset: #eef1ef;
   --color-surface-dynamic: #e7ebe8;
   --color-divider: #e3e5e3;
@@ -101,6 +102,7 @@
   --color-bg: #0b0d0c;
   --color-surface: #121513;
   --color-surface-2: #161917;
+  --color-surface-contrast: #010201;
   --color-surface-offset: #1b1f1c;
   --color-surface-dynamic: #232722;
   --color-divider: #262b26;
@@ -1306,7 +1308,7 @@ h4 {
  ========================================================================== */
  #partner_logos {
    padding-block: var(--space-12);
-   background-color: #FBFBFB;
+   background-color: var( --color-surface-contrast);
    border-top: 1px solid var(--color-border);
  }
  
@@ -1318,6 +1320,17 @@ h4 {
  
    max-width: 900px;
    margin-inline: auto;
+ }
+ 
+ .partners-grid.dark {
+   display: none;
+ }
+ 
+ [data-theme="dark"] .partners-grid.dark {
+   display: grid;
+ }
+ [data-theme="dark"] .partners-grid.light {
+   display: none;
  }
  
  .partner-logo {

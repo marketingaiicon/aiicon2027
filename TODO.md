@@ -1,5 +1,11 @@
-# AI ICON Website Revision Checklist
+# AI ICON Website Revision Checklist 
 
+## 10/15/26 Mtg
+- [x] done: Update dark mode on the partners section
+- [ ] todo: general policies page (?) -- also consider sales are non-transferrable update
+
+
+# AI ICON Website Revision Checklist
 > [!CAUTION]
 > **CRITICAL SPONSOR COMPLIANCE NOTICE:** Under no circumstances should Navy Federal (NavyFed) be listed, badged, or referenced anywhere in the sponsor carousel, partner logos, or site footer assets.
 
