@@ -946,6 +946,16 @@ h4 {
   font-size: var(--text-sm);
   color: var(--color-text);
 }
+
+.tier-benefit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.tier-benefit strong {
+  display: block;
+}
+
 .tier-features svg {
   width: 18px;
   height: 18px;
