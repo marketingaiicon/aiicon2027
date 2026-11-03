@@ -1,8 +1,12 @@
 # AI ICON Website Revision Checklist 
 
+## 11/03/26 Chat
+- [x] done: remove "prior seating..." from the midle tier
+- [x] done: updated schedule page consistent with evthing else
+
 ## 10/27/26 Email
 - [x] done: The Link Preview Image to be updated as it has the old dates and Temple as the location.
-- [ ] todo: "Get in Touch.  Reach the Right Team" section, under the input of contact info, add the following:  Help educators, professionals, and students build real-world AI skills.  Submit Your Trainer Application: https://forms.gle/Twdk3Hv44gdviaCD8
+- [x] done: "Get in Touch.  Reach the Right Team" section, under the input of contact info, add the following:  Help educators, professionals, and students build real-world AI skills.  Submit Your Trainer Application: https://forms.gle/Twdk3Hv44gdviaCD8
 - [x] done: Update to the "Pick Your Access Level". Take away the word "Tier" after ICON and Premier ICON
 - [x] done: General Admission - Add Access to Digital Playground
 - [x] done: ICON - update description:  Premier Access.  Everything in General Admission, plus exclusive access to Masterclass, catered networking events, and leadership discussions.
