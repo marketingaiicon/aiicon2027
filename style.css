@@ -58,6 +58,7 @@
   --color-primary-hover: #008f36;
   --color-primary-active: #00762d;
   --color-primary-highlight: #d6f2e0;
+  --color-primary-shade: #00853f;
 
   /* ---- Supporting semantic colors ---- */
   --color-warning: #b3690b;
@@ -835,9 +836,12 @@ h4 {
   line-height: 1.25;
 }
 .hotel-card.hotel-featured {
-  box-shadow:
-    inset 0 0 0 1.5px #00853f,
-    0 4px 18px rgba(0, 100, 45, 0.07);
+  border: 1px solid var(--color-primary-shade);
+  box-shadow: 0 4px 18px rgba(0, 100, 45, 0.07);
+}
+.hotel-card.hotel-featured:hover {
+  border: 1px solid var(--color-primary);
+  box-shadow: 0 4px 18px rgba(0, 100, 45, 0.07);
 }
 .hotel-distance {
   font-size: var(--text-sm);
