@@ -959,8 +959,8 @@ h4 {
     align-items: center;
     gap: 1.5rem;
     padding: 1.5rem;
-    background: #fff;
-    border: 1px solid #e5e8e5;
+    background: var(--color-bg);
+    border: 1px solid var(--color-surface-dynamic);
     border-radius: 12px;
   }
   
@@ -969,7 +969,7 @@ h4 {
     font-size: 1.65rem;
     font-weight: 800;
     letter-spacing: 0.03em;
-    color: #006b35;
+    color: var(--color-primary-active);
   }
   
   .airport-info {
