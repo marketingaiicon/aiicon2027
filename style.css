@@ -789,7 +789,7 @@ h4 {
 
 .hotels-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-6);
 }
 .hotel-card {
@@ -820,6 +820,7 @@ h4 {
   gap: var(--space-3);
   flex: 1;
 }
+
 .hotel-badge {
   font-family: var(--font-body);
   font-weight: 700;
@@ -833,6 +834,11 @@ h4 {
   font-weight: 800;
   line-height: 1.25;
 }
+.hotel-card.hotel-featured {
+  box-shadow:
+    inset 0 0 0 1.5px #00853f,
+    0 4px 18px rgba(0, 100, 45, 0.07);
+}
 .hotel-distance {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
@@ -845,6 +851,166 @@ h4 {
   font-weight: 700;
   color: var(--color-text);
 }
+.hotel-booking {
+  margin-top: 0.85rem;
+}
+
+.hotel-booking-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 15px;
+  background: #006b35;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hotel-booking-link:hover {
+  background: #004d26;
+}
+
+.hotel-code {
+  margin-top: 0.65rem;
+  font-size: 0.8rem;
+}
+
+.hotel-code summary {
+  cursor: pointer;
+  color: #555;
+}
+.hotel-code-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-top: 0.5rem;
+}
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .hotels-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: none;
+    width: 100%;
+    margin-inline: 0;
+  }
+  
+  .hotels-grid > .hotel-card:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      width: 100%;
+      max-width: calc((100% - 1.5rem) / 2);
+      justify-self: center;
+    }
+  }
+
+/* Phone */
+  @media (max-width: 600px) {
+    .hotels-grid {
+      grid-template-columns: minmax(0, 1fr);
+      max-width: none;
+      width: 100%;
+    }
+  
+    .hotels-grid > .hotel-card:last-child {
+      grid-column: auto;
+      max-width: none;
+      width: 100%;
+    }
+  }
+
+
+  /* =========================================
+     AIRPORT INFORMATION
+     ========================================= */
+  
+  .airports-section {
+    margin-top: 4rem;
+  }
+  
+  .airports-header {
+    text-align: center;
+    margin-bottom: 1.75rem;
+  }
+  
+  .airports-header h3 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    margin-bottom: 0.5rem;
+  }
+  
+  .airports-header p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .airports-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+  }
+  
+  .airport-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border: 1px solid #e5e8e5;
+    border-radius: 12px;
+  }
+  
+  .airport-code {
+    flex-shrink: 0;
+    font-size: 1.65rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    color: #006b35;
+  }
+  
+  .airport-info {
+    min-width: 0;
+  }
+  
+  .airport-info h4 {
+    font-size: 1rem;
+    font-weight: 650;
+    line-height: 1.35;
+    margin: 0 0 0.4rem;
+  }
+  
+  .airport-info p {
+    color: #666;
+    font-size: 0.875rem;
+    margin: 0 0 0.25rem;
+  }
+  
+  .airport-drive {
+    display: block;
+    font-size: 0.8rem;
+    color: #777;
+  }
+  
+  /* Mobile: stack airport cards */
+  @media (max-width: 600px) {
+    .airports-section {
+      margin-top: 3rem;
+    }
+  
+    .airports-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  
+    .airport-card {
+      padding: 1.25rem;
+      gap: 1.25rem;
+    }
+  
+    .airport-code {
+      font-size: 1.5rem;
+    }
+  }
 
 /* ==========================================================================
    Registration tiers

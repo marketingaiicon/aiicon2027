@@ -1,5 +1,42 @@
 # AI ICON Website Revision Checklist 
 
+## 11/18/26 Email -- AIICON 2027 | Travel & Accommodations
+
+**Venue:** Killeen Civic & Conference Center (KCCC)
+3601 S. W.S. Young Drive, Killeen, TX 76542
+
+### Hotels
+
+- [x] done: Courtyard by Marriott Killeen
+	- **Address:** 1721 E. Central Texas Expressway (US 190), Killeen, TX 76541
+	- **Booking Link:** https://app.marriott.com/resview2?id=1793725492526&key=GRP&app=resvlink
+	- **Booking Code:** Direct group reservation link
+	- **Distance to KCCC:** ~1.4 miles / 4 min driving
+	- **Distance to GRK:** 10.0 miles (hotel-reported)
+
+- [x] done: Hawthorn Extended Stay by Wyndham (formerly Shilo Inn)
+	- **Booking Link:** https://www.wyndhamhotels.com/hawthorn-extended-stay/killeen-texas/hawthorn-extended-stay-killeen/overview?checkInDate=02/08/2027&checkOutDate=02/10/2027&groupCode=020827AII
+	- **Booking Code:** 020827AII
+	- **Group Name:** AIICON
+	- **Phone:** 254-699-0999
+	- **Distance to KCCC:** ~0.2 miles / 4 min walking
+
+- [x] done: Hampton Inn Harker Heights
+	- **Booking Link:** https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=ILEHXHX&arrivalDate=2027-02-08&departureDate=2027-02-10&groupCode=aic&room1NumAdults=1
+	- **Booking Code:** AIC
+	- **Distance to KCCC:** ~5.8 miles / 9 min driving
+
+### Airports
+
+- [x] done: Add Killeen Regional Airport (GRK)
+	- **Distance to KCCC:** ~9–11 miles / 15–20 min driving (area estimate)
+
+- [x] done: Add Austin-Bergstrom International Airport (AUS)
+	- **Distance to KCCC:** ~76–80 miles / 1 hr 20–30 min driving (area estimate)
+
+
+
+
 ## 11/03/26 Chat
 - [x] done: remove "prior seating..." from the midle tier
 - [x] done: updated schedule page consistent with evthing else
